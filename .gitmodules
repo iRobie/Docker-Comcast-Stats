@@ -1,0 +1,6 @@
+[submodule "speedtest"]
+	path = speedtest
+	url = https://github.com/barrycarey/Speedtest-for-InfluxDB-and-Grafana
+[submodule "comcastusage"]
+	path = comcastusage
+	url = https://github.com/billimek/comcastUsage-for-influxdb

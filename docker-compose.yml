@@ -1,0 +1,43 @@
+version: '3'
+services:
+## Front end
+    grafana:
+      image: grafana/grafana:latest
+      container_name: grafana
+      ports:
+        - "3235:3000"
+      links:
+        - influxdb
+      volumes:
+        - ./grafana:/etc/grafana
+        
+# Data grabbers
+    speedtest:
+      build:
+        context: ./speedtest
+      container_name: speedtest
+      volumes:
+        - ./speedtest.ini:/src/config.ini
+      restart: always
+      links:
+        - influxdb
+
+    comcastusage:
+      build:
+        context: ./comcastusage
+      container_name: comcastusage
+      volumes:
+        - ./comcastusage.ini:/src/config.ini
+      restart: always
+      links:
+        - influxdb
+        
+# Database
+    influxdb:
+      image: influxdb:latest
+      container_name: influxdb
+      volumes:
+      - ./db:/var/lib/influxdb
+
+
+
