@@ -10,6 +10,7 @@ services:
         - influxdb
       volumes:
         - ./grafana:/etc/grafana
+        - ./grafana/data:/var/lib/grafana
         
 # Data grabbers
     speedtest:
@@ -36,6 +37,8 @@ services:
     influxdb:
       image: influxdb:latest
       container_name: influxdb
+      ports:
+        - "8086:8086"
       volumes:
       - ./db:/var/lib/influxdb
 

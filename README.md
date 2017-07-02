@@ -14,7 +14,9 @@ This page aggregates two different projects: [Speedtest for InfluxDB](https://gi
 * Edit the comcastUsage.ini and speedtest.ini files at the root of the folder
 * docker-compose up -d
 
-## Displaying data
+## Displaying data (optional)
+**NOTE** These are instructions to do this manually, if you'd prefer not to use the included grafana data folder
+
 Set datasources:
 * Open Browser to (dockerhost):3235
 * Left menu, sign in

@@ -2,15 +2,15 @@
   "__inputs": [
     {
       "name": "DS_COMCAST",
-      "label": "comcast",
+      "label": "Comcast",
       "description": "",
       "type": "datasource",
       "pluginId": "influxdb",
       "pluginName": "InfluxDB"
     },
     {
-      "name": "DS_SPEEDTEST",
-      "label": "speedtest",
+      "name": "DS_SPEEDTESTS",
+      "label": "speedtests",
       "description": "",
       "type": "datasource",
       "pluginId": "influxdb",
@@ -175,7 +175,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_SPEEDTEST}",
+          "datasource": "${DS_SPEEDTESTS}",
           "format": "bps",
           "gauge": {
             "maxValue": 100,
@@ -284,7 +284,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "datasource": "${DS_SPEEDTEST}",
+          "datasource": "${DS_SPEEDTESTS}",
           "format": "bps",
           "gauge": {
             "maxValue": 100,
@@ -391,7 +391,7 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "datasource": "${DS_SPEEDTEST}",
+          "datasource": "${DS_SPEEDTESTS}",
           "format": "ms",
           "gauge": {
             "maxValue": 100,
@@ -593,7 +593,7 @@
               "value": 900
             }
           ],
-          "timeFrom": null,
+          "timeFrom": "30d",
           "timeShift": null,
           "title": "Data Usage History",
           "tooltip": {
@@ -645,7 +645,7 @@
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "${DS_SPEEDTEST}",
+          "datasource": "${DS_SPEEDTESTS}",
           "fill": 1,
           "id": 1,
           "legend": {
@@ -816,5 +816,5 @@
   },
   "timezone": "browser",
   "title": "Comcast Info",
-  "version": 5
+  "version": 1
 }
