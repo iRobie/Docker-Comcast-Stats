@@ -10,9 +10,20 @@ This page aggregates two different projects: [Speedtest for InfluxDB](https://gi
 
 ## Running the container
 * Make sure docker-compose is installed
-* Clone this repository
-* Edit the comcastUsage.ini and speedtest.ini files at the root of the folder
+* Clone this repository (git clone recursive [url])
+* Edit the comcastUsage.ini and speedtest.ini files at the root of the folder (InfluxDB info can be empty)
 * docker-compose up -d
+
+## Set default dashboard (optional)
+
+Set the Comcast dashboard as default:
+* Open Browser to (dockerhost):3235
+* Left menu, sign in
+* Sign in using grafana default credentials (admin/admin)
+* Select the Comcast-Info dashboard, star it
+* Menu -> Admin -> Main Org -> Preferences
+* Select Home Dashboard as Comcast-Info
+
 
 ## Displaying data (optional)
 **NOTE** These are instructions to do this manually, if you'd prefer not to use the included grafana data folder
