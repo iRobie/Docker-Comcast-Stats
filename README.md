@@ -13,6 +13,7 @@ This page aggregates two different projects: [Speedtest for InfluxDB](https://gi
 * Clone this repository (git clone recursive [url])
 * Edit the comcastUsage.ini and speedtest.ini files at the root of the folder (InfluxDB info can be empty)
 * docker-compose up -d
+* (Optional) If hosting behind a reverse proxy, edit grafana.ini according to [Grafana Instructions](http://docs.grafana.org/installation/behind_proxy/)
 
 ## Set default dashboard (optional)
 
